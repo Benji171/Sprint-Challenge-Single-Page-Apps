@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer:  client side does not need to keep makeing request to the server, it just does it once when the application is being loaded.
 
 ## Project Set Up
 

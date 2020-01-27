@@ -37,3 +37,35 @@ main {
 header h1 {
   text-align: center;
 }
+
+.card {
+  text-align: center;
+  padding: 30px;
+  border-bottom: 2px solid black;
+
+}
+.title {
+  font-size: 1.5rem;
+}
+.card-img {
+  border-radius: 50%;
+}
+.search-form {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.links {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  border: 2px solid #FB646799;
+  background-color: #FB646799;
+  margin: 5px;
+}
+.main-img {
+  width: 100%;
+}

@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, CardTitle, CardText } from "reactstrap";
 
-export default function LocationCard(props) {
+export default function EpisodeCard(props) {
   return (
     <Card>
       <CardTitle>{props.name}</CardTitle>
-      <CardText>{props.type}</CardText>
-      <CardText>{props.dimension}</CardText>
+      <CardText>{props.episode}</CardText>
+      <CardText>Release Date: {props.date}</CardText>
     </Card>
   );
 }

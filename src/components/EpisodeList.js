@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"
 import { Container, Row } from "reactstrap";
-import CharacterCard from "./CharacterCard";
-import SearchForm from "./SearchForm";
+import EpisodeCard from "./EpisodeCard"
 
-export default function CharacterList() {
+export default function LocationList() {
   // TODO: Add useState to track data from useEffect
-  const [character, setCharacter] = useState([])
+  const [episode, setEpisode] = useState([])
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
     axios
-    .get("https://rickandmortyapi.com/api/character/")
+    .get("https://rickandmortyapi.com/api/episode/")
     .then(res => {
       console.log(res)
-      setCharacter(res.data.results);
+      setEpisode(res.data.results);
     })
     .catch(err => {
       console.log("Fetch Error", err);
@@ -25,22 +24,16 @@ export default function CharacterList() {
   
   return (
     <Container>
-      <SearchForm/>
       <Row>
-        {character.map(data => {
+        {episode.map(data => {
           return (
-          <CharacterCard
-          key = {data.name}
-          name = {data.name}
-          status = {data.status}
-          image = {data.image}
-          species = {data.species}
-          gender = {data.gender}
-          location = {data.location.name}
+          <EpisodeCard
+            name = {data.name}
+            date = {data.air_date}
+            episode = {data.episode}
           />
         )})}
       </Row>
     </Container>
   );
 }
-
